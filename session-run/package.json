@@ -1,0 +1,25 @@
+﻿{
+  "name": "olympus-payout-platform-tests",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Automated API and UI tests for Olympus Payout Platform.",
+  "scripts": {
+    "test": "node scripts/run-tests.js dev",
+    "test:dev": "node scripts/run-tests.js dev",
+    "test:test": "node scripts/run-tests.js test",
+    "test:stage": "node scripts/run-tests.js stage",
+    "test:api": "node scripts/run-tests.js dev --project=api",
+    "test:api:dev": "node scripts/run-tests.js dev --project=api",
+    "test:api:test": "node scripts/run-tests.js test --project=api",
+    "test:api:stage": "node scripts/run-tests.js stage --project=api",
+    "test:ui:dev": "node scripts/run-tests.js dev --project=chromium",
+    "test:ui:test": "node scripts/run-tests.js test --project=chromium",
+    "test:ui:stage": "node scripts/run-tests.js stage --project=chromium",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "dotenv": "^16.4.7"
+  }
+}

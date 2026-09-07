@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Playwright/runtime artifacts
+playwright-report/
+playwright-report*/
+test-results/
+blob-report/
+playwright/.cache/
+trace.zip
+*.har
+*.webm
+*.mp4
+
+# Auth/session state
+.auth/
+*storageState*.json
+*session*.json
+*cookie*.json
+*cookies*.json
+*auth*.json
+
+# Manual/codegen recordings
+recordings/
+tests/recordings/
+
+# Temporary app bundles
+.tmp-app/
+
+# API response dumps from exploratory knowledge capture.
+# Screenshots are intentionally kept for the knowledge base.
+docs/platform-knowledge/assets/**/*.json
+
+# Logs
+*.log
+
+# Generated local reports and screenshots
+outputs/

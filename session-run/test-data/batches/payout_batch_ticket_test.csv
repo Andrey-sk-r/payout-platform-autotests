@@ -1,0 +1,24 @@
+beneficiary_name,rail,bank_account_number,bank_identifier,bank_branch_code,payshap_id,phone_number,solmate_recipient_id,payroll_id,amount,reference,create_beneficiary
+Ticket FNB Display,eft,7100000001,First National Bank,,,,,,100.00,TC01-BANK-FNB,1
+Ticket ABSA Display,rtc,7100000002,ABSA Bank,632005,,,,,200.00,TC02-BANK-ABSA,0
+Ticket Capitec Display,eft,7100000003,Capitec Bank,,,,,,300.00,TC03-BANK-CAPITEC,true
+Ticket Standard Display,eft,7100000004,Standard Bank,,,,,,400.00,TC04-BANK-STANDARD,false
+Ticket Ned Display,eft,7100000005,Ned Bank,,,,,,500.00,TC05-BANK-NED,1
+Ticket Gro Display,eft,7100000006,Grobank,,,,,,600.00,TC06-BANK-GRO,1
+Ticket Discovery Display,eft,7100000007,Discovery Bank,,,,,,700.00,TC07-BANK-DISCOVERY,1
+Ticket Space Amount,eft,7100000008,fnb,,,,,,34 789.99,TC08-AMOUNT-SPACE,1
+Ticket Comma Amount,eft,7100000009,absa,,,,,,"1234,56",TC09-AMOUNT-COMMA,1
+"Holden,Jonathan",eft,7100000010,fnb,,,,,,100.00,TC10-NAME-COMMA,1
+O'Brien,eft,7100000011,fnb,,,,,,100.00,TC11-NAME-APOSTROPHE,1
+"A,,B",eft,7100000012,fnb,,,,,,100.00,TC12-NAME-MULTI-INVALID,1
+Ticket Auto Rail EFT,,7100000013,fnb,,,,,,111.11,TC13-AUTO-EFT,1
+Ticket Auto Rail Payshap,,,,,27821234567,,,,222.22,TC14-AUTO-PAYSHAP,1
+Ticket Auto Rail Ewallet,,,,,,27835551234,,,333.33,TC15-AUTO-EWALLET,1
+Ticket Auto Rail Solmate,,,,,,,SOLMATE-REC-001,,444.44,TC16-AUTO-SOLMATE,1
+,employee_card,,,,,27 00 005 3930 7980 ,,,2500.00,TC17-EMPLOYEE-PHONE,0
+,employee_card,,,,,,,PAY-044-6696 ,1800.00,TC18-EMPLOYEE-PAYROLL,0
+Ticket Multi Error,eft,,fnb,,,,,,NOTANUMBER,TC19-MULTI-ERROR,1
+",,,",eft,7100000019,fnb,,,,,,100.00,TC20-EMPTY-NAME-AFTER-NORMALIZE,1
+Ticket Unknown Bank,eft,7100000020,Unknown Bank Name,,,,,,100.00,TC21-UNKNOWN-BANK,1
+Ticket Invalid Create Beneficiary,eft,7100000021,fnb,,,,,,100.00,TC22-INVALID-CREATE-BENEFICIARY,yes
+Ticket Missing Rail And Source,,,,,,,,,100.00,TC23-MISSING-RAIL,1

@@ -208,7 +208,7 @@ test.describe('Invoice and draft-batch compatibility', () => {
       { waitForTerminal: false },
     );
 
-    await expect(uploaded.row.getByText(/parsing…|Processing|Pending/i)).toBeVisible({ timeout: 45_000 });
+    await expect(uploaded.row.getByText('parsing…', { exact: true })).toBeVisible({ timeout: 45_000 });
     await selectInvoice(uploaded.row);
     await expect(page.getByRole('button', { name: 'Create batch (1)' })).toBeEnabled();
     await createDraftFromSelection(page, [uploaded.fileName]);
@@ -224,10 +224,7 @@ test.describe('Invoice and draft-batch compatibility', () => {
 
     await expect(first.row.getByText('new', { exact: true })).toBeVisible();
     await expect(second.row.getByText('new', { exact: true })).toBeVisible();
-    await expect(
-      first.row.getByLabel('Possible duplicate of an earlier invoice')
-        .or(second.row.getByLabel('Possible duplicate of an earlier invoice')),
-    ).toBeVisible();
+    await expect(second.row.getByLabel('Possible duplicate of an earlier invoice')).toBeVisible();
 
     await selectInvoice(first.row);
     await selectInvoice(second.row);

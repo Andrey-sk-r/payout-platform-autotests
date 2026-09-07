@@ -193,7 +193,7 @@ test.describe('Invoice and draft-batch compatibility', () => {
     await expect(createDialog.getByText(fileName, { exact: true })).toBeVisible();
     await createDialog.getByRole('button', { name: 'Create batch', exact: true }).click();
     await page.waitForURL(/\/payouts\/[^/]+\/draft/, { timeout: 45_000 });
-    await expect(page.getByText(fileName, { exact: true })).toBeVisible();
+    await expect(page.getByRole('button').filter({ hasText: fileName })).toBeVisible();
     await expect(page.getByRole('button', { name: /Send for Approval/i })).toBeVisible();
   });
 

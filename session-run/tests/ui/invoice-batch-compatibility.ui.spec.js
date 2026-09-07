@@ -116,7 +116,7 @@ async function createDraftFromFixture(page, fixturePath, prefix, testInfo) {
   await selectInvoice(uploaded.row);
   const batchUuid = await createDraftFromSelection(page, [uploaded.fileName]);
   expect(batchUuid, 'created draft batch uuid').toBeTruthy();
-  await expect(page.getByText(uploaded.fileName, { exact: true })).toBeVisible({ timeout: 45_000 });
+  await expect(page.getByRole('button').filter({ hasText: uploaded.fileName })).toBeVisible({ timeout: 45_000 });
   return { ...uploaded, batchUuid };
 }
 
